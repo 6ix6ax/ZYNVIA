@@ -1,25 +1,57 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ZYNVIA – ผู้ส่งมอบไอเดีย</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZYNVIA</title>
   <style>
+    :root{
+      --bg-0:#040d1c;   /* พื้นหลัง */
+      --bg-1:#040d1c;   /* พื้นหลัง */
+      --gold:#d3ba7b;   /* สีตัวอักษรหลัก */
+      --gold-2:#f2d680; /* สีทองอ่อน เผื่อไว้ */
+    }
     body{
-      background:#040d1c;   /* พื้นหลังที่ต้องการ */
-      color:#d3ba7b;        /* สีตัวหนังสือที่ต้องการ */
-      font-family: system-ui, Arial, sans-serif;
-      margin:0; padding:48px;
+      background: linear-gradient(180deg, var(--bg-0), var(--bg-1));
+      color: var(--gold);
+      font-family: Arial, sans-serif;
+      margin:0;
+      padding:0;
       text-align:center;
     }
-    h1{font-size:40px; margin:0 0 8px}
-    p{opacity:.9}
-    .box{max-width:800px;margin:28px auto;padding:20px;border:1px solid rgba(211,186,123,.35);border-radius:16px}
+    header{
+      padding:40px 20px;
+    }
+    h1{
+      font-size:3rem;
+      margin-bottom:10px;
+    }
+    p{
+      font-size:1.2rem;
+      color: var(--gold);
+    }
+    .btn{
+      display:inline-block;
+      margin-top:20px;
+      padding:12px 24px;
+      border:2px solid var(--gold);
+      color:var(--gold);
+      background:transparent;
+      text-decoration:none;
+      border-radius:8px;
+      transition:0.3s;
+    }
+    .btn:hover{
+      background:var(--gold);
+      color:var(--bg-0);
+    }
   </style>
 </head>
 <body>
-  <h1>ZYNVIA</h1>
-  <p>หน้านำร่องทดสอบสีพื้นหลังและตัวหนังสือ</p>
-  <div class="box">พื้นหลัง #040d1c · ตัวอักษร #d3ba7b</div>
+  <header>
+    <h1>ZYNVIA</h1>
+    <p>เว็บไซต์กำลังอยู่ในระหว่างพัฒนา</p>
+    <a href="#" class="btn">เริ่มต้น</a>
+  </header>
 </body>
 </html>
