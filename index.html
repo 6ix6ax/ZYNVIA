@@ -1,267 +1,201 @@
 <!DOCTYPE html><html lang="th">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ZYNVIA – ผู้ส่งมอบไอเดีย</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    :root{
-      --bg-0:#040d1c;  /* พื้นหลังหลัก */
-      --bg-1:#040d1c;  /* ไล่เฉดให้กลืน */
-      --gold:#d3ba7b;  /* สีตัวหนังสือ/ปุ่มโทนทอง */
-      --gold-2:#e6cf95;/* ทองอ่อนใช้เนียน ๆ */
-    }
-    body{
-      background: radial-gradient(1200px 600px at 70% 10%, rgba(211,186,123,0.10), transparent 40%),
-                  radial-gradient(900px 500px at 20% 0%, rgba(211,186,123,0.06), transparent 45%),
-                  linear-gradient(180deg, var(--bg-0), var(--bg-1));
-      color:var(--gold);
-    }
-    .gold{color:var(--gold)}
-    .gold-bg{background:var(--gold); color:#0b0e14}
-    .glass{backdrop-filter:saturate(140%) blur(8px); background:rgba(12,18,32,.45); border:1px solid rgba(211,186,123,.25)}
-    .card{background:rgba(255,255,255,0.03); border:1px solid rgba(211,186,123,0.18)}
-    .table-wrap{box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 0 0 1px rgba(255,255,255,0.04); border-radius: 16px; overflow:hidden}
-    .row:hover{background: rgba(211,186,123,0.06)}
-    .badge{border:1px solid rgba(211,186,123,.55); color:var(--gold); background: rgba(211,186,123,.10)}
-    .progress{background: rgba(255,255,255,.12)}
-    .shine:before{content:""; position:absolute; inset:-1px; background: linear-gradient(120deg, transparent, rgba(255,255,255,.25), transparent); transform: translateX(-100%);}
-    .shine:hover:before{animation: shine 1.2s ease}
-    @keyframes shine{to{transform: translateX(100%);}}
-    .logo-glow{filter: drop-shadow(0 0 18px rgba(211,186,123,.35)) drop-shadow(0 0 48px rgba(211,186,123,.12));}
-    ::selection{background: rgba(211,186,123,0.35); color:#0b0e14;}
-  </style>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZYNVIA — จับไอเดีย สร้างโอกาส เปลี่ยนโลก</title>
+<style>
+:root{
+  --bg:#040d1c; --gold:#d3ba7b; --gold-soft:#e6cf95; --ink:#0b0e14;
+}
+*{box-sizing:border-box} body{margin:0;font-family:system-ui,Arial,sans-serif;
+  color:var(--gold); background:radial-gradient(900px 500px at 70% 10%,rgba(211,186,123,.08),transparent 40%),
+  linear-gradient(180deg,var(--bg),#061021);}
+.container{max-width:1080px;margin:auto;padding:32px 20px;}
+.center{text-align:center}
+.logo{width:120px;height:120px;margin:40px auto 16px;display:block;filter:drop-shadow(0 6px 24px rgba(211,186,123,.25))}
+h1{font-size:56px;letter-spacing:.04em;margin:0 0 12px} .tag{opacity:.9;font-size:28px}
+.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:22px; margin:42px 0}
+.card{border:1px solid rgba(211,186,123,.25);border-radius:16px;padding:18px;text-align:center;background:rgba(255,255,255,.02)}
+.icon{font-size:26px;margin-bottom:8px}
+.btns{display:flex;gap:12px;justify-content:center;margin:36px 0 10px}
+.btn{padding:12px 20px;border-radius:12px;border:1.5px solid rgba(211,186,123,.5);color:var(--gold);text-decoration:none}
+.btn.gold{background:var(--gold);color:var(--ink);border-color:transparent}
+a.card{color:inherit;text-decoration:none} a.card:hover{background:rgba(211,186,123,.07)}
+footer{border-top:1px solid rgba(211,186,123,.18);text-align:center;padding:28px 0;opacity:.85}
+@media(max-width:840px){.grid{grid-template-columns:repeat(2,1fr)} h1{font-size:40px}}
+</style>
 </head>
-<body class="antialiased">
-  <!-- NAVBAR -->
-  <header class="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-[#040d1ccc] border-b border-[rgba(211,186,123,0.15)]">
-    <div class="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div class="logo-glow">
-          <svg width="34" height="34" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M12 23.5v25c0 2.9 1.6 5.6 4.1 7l19.9 11.2c2.5 1.4 5.6 1.4 8.1 0l19.9-11.2c2.5-1.4 4.1-4.1 4.1-7v-25c0-2.9-1.6-5.6-4.1-7L44.1 5.3a9 9 0 0 0-8.1 0L16.1 16.5A8 8 0 0 0 12 23.5Z" fill="url(#g)"/>
-            <path d="M36 18c7.6 0 13.7 6.1 13.7 13.7 0 4.9-2.6 9.4-6.8 11.9l-2.7 1.6v6.3c0 .7-.6 1.3-1.3 1.3h-5.6c-.7 0-1.3-.6-1.3-1.3v-6.3l-2.7-1.6A13.7 13.7 0 0 1 22.3 31.7C22.3 24.1 28.4 18 36 18Zm0 7.2a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13Z" fill="#0b0e14" opacity=".9"/>
-            <defs>
-              <linearGradient id="g" x1="12" y1="5" x2="64" y2="68" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#EAD59E"/><stop offset="1" stop-color="#D3BA7B"/>
-              </linearGradient>
-            </defs>
-          </svg>
-        </div>
-        <span class="text-lg md:text-xl tracking-[0.22em] font-semibold gold">ZYNVIA</span>
-      </div>
-      <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a class="hover:underline" href="#flow">วิธีทำงาน</a>
-        <a class="hover:underline" href="#market">รายการไอเดีย</a>
-        <a class="hover:underline" href="#trust">ความน่าเชื่อถือ</a>
-      </nav>
-      <div class="flex items-center gap-3">
-        <button class="px-4 py-2 rounded-xl border border-[rgba(211,186,123,0.45)] hover:bg-[rgba(211,186,123,0.10)] transition">เข้าสู่ระบบ</button>
-        <button class="px-4 py-2 rounded-xl gold-bg font-medium shine relative overflow-hidden">เริ่มใช้งานฟรี</button>
-      </div>
-    </div>
-  </header>
+<body>
+  <div class="container center">
+    <img src="logo.png" alt="ZYNVIA" class="logo">
+    <h1>ZYNVIA</h1>
+    <div class="tag">จับไอเดีย สร้างโอกาส เปลี่ยนโลก</div>
 
-  <!-- HERO -->
-  <section class="max-w-7xl mx-auto px-5 pt-14 pb-16 grid lg:grid-cols-2 items-center gap-10">
-    <div>
-      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">จับไอเดีย <span class="underline decoration-[rgba(211,186,123,.45)]">สร้างโอกาส</span> เปลี่ยนโลก</h1>
-      <p class="mt-4 text-[color:var(--gold)]/90 text-lg max-w-xl">
-        แพลตฟอร์มที่เปลี่ยน <span class="gold font-semibold">ความคิด</span> ให้กลายเป็น <span class="gold font-semibold">คุณค่า</span> — รวมผู้สอน ผู้เรียน ฟรีแลนซ์ และเจ้าของกิจการไว้ในระบบเดียว พร้อมสัญญาและข้อมูลที่ตรวจสอบได้
-      </p>
-      <div class="mt-7 flex flex-wrap gap-3">
-        <a href="#market" class="gold-bg rounded-xl px-5 py-3 font-semibold shine relative overflow-hidden">เริ่มค้นหาไอเดีย</a>
-        <a href="#sell" class="rounded-xl px-5 py-3 border border-[rgba(211,186,123,0.45)] hover:bg-[rgba(211,186,123,0.10)] transition">เริ่มขายไอเดีย</a>
-      </div>
-
-      <div id="trust" class="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-4 text-sm">
-        <div class="card rounded-2xl p-4 text-center">
-          <div class="text-2xl font-bold">2,480+</div>
-          <div class="opacity-80">สมาชิกที่ใช้งาน</div>
-        </div>
-        <div class="card rounded-2xl p-4 text-center">
-          <div class="text-2xl font-bold">418</div>
-          <div class="opacity-80">ไอเดียผ่านการตรวจ</div>
-        </div>
-        <div class="card rounded-2xl p-4 text-center">
-          <div class="text-2xl font-bold">100%</div>
-          <div class="opacity-80">สัญญาปลอดภัย</div>
-        </div>
-      </div>
+    <!-- แถวไอคอน -->
+    <div class="grid">
+      <a class="card" href="seller.html" title="ไปหน้าผู้ขาย">
+        <div class="icon">💡</div><div>ขายไอเดีย</div>
+      </a>
+      <a class="card" href="buyer.html" title="ไปหน้าผู้ซื้อ">
+        <div class="icon">💰</div><div>ซื้อไอเดีย</div>
+      </a>
+      <div class="card"><div class="icon">🤝</div><div>พาร์ทเนอร์ไอเดีย</div></div>
+      <div class="card"><div class="icon">🏪</div><div>เจ้าของธุรกิจ</div></div>
+      <div class="card"><div class="icon">✅</div><div>ฟรีแลนซ์ทำโปรเจกต์</div></div>
     </div>
 
-    <!-- Mockup stack -->
-    <div class="relative">
-      <div class="absolute -top-10 -right-6 w-60 h-60 rounded-full bg-[rgba(211,186,123,0.12)] blur-3xl"></div>
-      <div class="space-y-4">
-        <div class="glass rounded-3xl p-5">
-          <div class="flex items-center justify-between">
-            <div class="text-sm opacity-85">ไอเดียเด่นสัปดาห์นี้</div>
-            <span class="badge rounded-full px-3 py-1 text-xs">การแพทย์</span>
-          </div>
-          <div class="mt-3 text-lg font-semibold">คลินิกดูแลสุขภาพเชิงรุก (สาขาเคลื่อนที่)</div>
-          <div class="mt-4 flex items-center gap-3">
-            <div class="progress h-2 w-full rounded-full overflow-hidden"><div class="h-full gold-bg" style="width:78%"></div></div>
-            <span class="text-xs opacity-80">ความเป็นไปได้ 78%</span>
-          </div>
-        </div>
-
-        <div class="glass rounded-3xl p-5">
-          <div class="flex items-center justify-between">
-            <div class="text-sm opacity-85">ผลลัพธ์ที่เคยเกิดขึ้น</div>
-            <span class="badge rounded-full px-3 py-1 text-xs">สังคม</span>
-          </div>
-          <div class="mt-3 text-lg font-semibold">แอปแชร์ทรัพยากรชุมชน</div>
-          <p class="mt-2 text-sm opacity-85">ปิดการขาย 74 ครั้ง · พาร์ทเนอร์ 13 ราย · ผลลัพธ์ 12 โปรเจกต์</p>
-        </div>
-
-        <div class="glass rounded-3xl p-5">
-          <div class="flex items-center justify-between">
-            <div class="text-sm opacity-85">รับประกันโดยครู</div>
-            <span class="badge rounded-full px-3 py-1 text-xs">การตลาด</span>
-          </div>
-          <div class="mt-3 text-lg font-semibold">ชุดบทเรียน–ลงมือทำ 7 วัน</div>
-          <div class="mt-4 flex gap-3 items-center text-sm">
-            <img class="w-8 h-8 rounded-full" src="https://i.pravatar.cc/64?img=8" alt="mentor" />
-            <div>
-              <div class="font-medium">Mentor: กฤติน</div>
-              <div class="opacity-80">จบคอร์สนี้ = เข้าโหนดงานทันที</div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="btns">
+      <a class="btn gold" href="seller.html">เริ่มขายไอเดีย</a>
+      <a class="btn" href="buyer.html">เริ่มค้นหาไอเดีย</a>
     </div>
-  </section>
+    <footer>© 2025 ZYNVIA</footer>
+  </div>
+</body>
+</html>
 
-  <!-- FLOW -->
-  <section id="flow" class="max-w-7xl mx-auto px-5 pb-8">
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="card rounded-2xl p-6">
-        <div class="text-sm gold">สำหรับผู้ซื้อ</div>
-        <h3 class="text-2xl font-semibold mt-1">เลือก–ยืนยัน–ปิดการขายภายใน 3–7 วัน</h3>
-        <div class="mt-4 grid sm:grid-cols-3 gap-4">
-          <div class="rounded-xl p-4 border border-[rgba(211,186,123,0.25)]">
-            <div class="text-sm opacity-80">ขั้นที่ 1</div>
-            <div class="font-medium">ค้นหาความเป็นไปได้</div>
-            <p class="text-sm opacity-75 mt-1">วิเคราะห์ข้อมูล, ตรวจสอบความสามารถ</p>
-          </div>
-          <div class="rounded-xl p-4 border border-[rgba(211,186,123,0.25)]">
-            <div class="text-sm opacity-80">ขั้นที่ 2</div>
-            <div class="font-medium">ยืนยันความปลอดภัย</div>
-            <p class="text-sm opacity-75 mt-1">เซ็นสัญญา + ป้องกันการคัดลอก</p>
-          </div>
-          <div class="rounded-xl p-4 border border-[rgba(211,186,123,0.25)]">
-            <div class="text-sm opacity-80">ขั้นที่ 3</div>
-            <div class="font-medium">ปิดการขาย</div>
-            <p class="text-sm opacity-75 mt-1">ส่งมอบ + สร้างพาร์ทเนอร์</p>
-          </div>
+<!DOCTYPE html><html lang="th">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZYNVIA — หน้าผู้ขาย</title>
+<style>
+:root{--bg:#040d1c;--gold:#d3ba7b}
+body{margin:0;font-family:system-ui,Arial,sans-serif;color:var(--gold);
+     background:linear-gradient(180deg,var(--bg),#061021)}
+.container{max-width:1100px;margin:auto;padding:28px 20px}
+a{color:var(--gold)} .top{display:flex;align-items:center;gap:12px}
+.logo{width:40px} h1{margin:6px 0 0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:22px 0}
+.card{border:1px solid rgba(211,186,123,.25);border-radius:14px;padding:16px;background:rgba(255,255,255,.02)}
+.badge{display:inline-block;border:1px solid rgba(211,186,123,.55);padding:2px 8px;border-radius:999px;font-size:12px}
+.table{width:100%;border-collapse:collapse;margin-top:16px;font-size:14px}
+.table th,.table td{padding:10px;border-bottom:1px solid rgba(211,186,123,.18);text-align:left}
+.actions a{border:1px solid rgba(211,186,123,.45);padding:6px 10px;border-radius:8px;text-decoration:none}
+.headerbar{display:flex;justify-content:space-between;align-items:center;margin:6px 0 10px}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="headerbar">
+      <div class="top">
+        <a href="index.html"><img src="logo.png" class="logo" alt="Z"></a>
+        <div>
+          <div>ZYNVIA</div>
+          <h1>ขายไอเดีย</h1>
         </div>
       </div>
+      <a href="buyer.html">ไปหน้าผู้ซื้อ →</a>
+    </div>
 
-      <div id="sell" class="card rounded-2xl p-6">
-        <div class="text-sm gold">สำหรับผู้ขาย</div>
-        <h3 class="text-2xl font-semibold mt-1">โพสต์ไอเดีย–เข้าระบบโหนดงาน–ทำเงิน</h3>
-        <div class="mt-4 grid sm:grid-cols-3 gap-4">
-          <div class="rounded-xl p-4 border border-[rgba(211,186,123,0.25)]">
-            <div class="text-sm opacity-80">ขั้นที่ 1</div>
-            <div class="font-medium">โพสต์ไอเดีย</div>
-            <p class="text-sm opacity-75 mt-1">ระบุปัญหา/Persona/ทรัพยากร</p>
-          </div>
-          <div class="rounded-xl p-4 border border-[rgba(211,186,123,0.25)]">
-            <div class="text-sm opacity-80">ขั้นที่ 2</div>
-            <div class="font-medium">ผู้ซื้อปลดล็อก</div>
-            <p class="text-sm opacity-75 mt-1">ข้อมูลเชิงลึกถูกป้องกัน จนกว่าจะยอมรับ</p>
-          </div>
-          <div class="rounded-xl p-4 border border-[rgba(211,186,123,0.25)]">
-            <div class="text-sm opacity-80">ขั้นที่ 3</div>
-            <div class="font-medium">เริ่มงานจริง</div>
-            <p class="text-sm opacity-75 mt-1">เข้ากลุ่มทำงาน/พาร์ทเนอร์</p>
-          </div>
+    <!-- ขั้นตอนผู้ขาย -->
+    <div class="grid">
+      <div class="card"><div class="badge">ขั้นที่ 1</div><h3>โพสต์ไอเดีย</h3><p>ใส่ชื่อ ปัญหา Persona และทรัพยากร</p></div>
+      <div class="card"><div class="badge">ขั้นที่ 2</div><h3>ผู้ซื้อปลดล็อก/จ่าย</h3><p>เนื้อหาเชิงลึกถูกป้องกันจนกว่าจะยอมรับ</p></div>
+      <div class="card"><div class="badge">ขั้นที่ 3</div><h3>ปิดการขาย 3–7 วัน</h3><p>สัญญา + ส่งมอบ + สร้างพาร์ทเนอร์</p></div>
+    </div>
+
+    <!-- ตารางรายการ -->
+    <h3>รายการไอเดีย (ฝั่งผู้ขาย)</h3>
+    <table class="table">
+      <thead><tr>
+        <th>โค้ดไอเดีย</th><th>หมวดหมู่</th><th>หัวเรื่อง</th><th>การยืนยัน</th>
+        <th style="text-align:right">การเข้าชม</th><th>ข้อมูลเชิงปริมาณ</th><th>ผลลัพธ์</th><th>การกระทำ</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td>132123</td><td><span class="badge">อาหาร</span></td><td>ชุดสมุนไพรฟาสท์ฟู้ดสำหรับ WFH</td>
+          <td>★★★☆☆</td><td style="text-align:right">20.4k</td><td>“วัตถุดิบพร้อม” + พาร์ทเนอร์ 41</td><td>ขาย 5 · พาร์ทเนอร์ 1</td>
+          <td class="actions"><a href="#">ปลดล็อก</a></td>
+        </tr>
+        <tr>
+          <td>231238</td><td><span class="badge">อาหาร</span></td><td>แพลตฟอร์มเก็บคาโตะเมฆ</td>
+          <td>★★☆☆☆</td><td style="text-align:right">152</td><td>ข้อมูลเชิงลึก 12 ชุด</td><td>ขาย 2</td>
+          <td class="actions"><a href="#">ปลดล็อก</a></td>
+        </tr>
+        <tr>
+          <td>284949</td><td><span class="badge">การแพทย์</span></td><td>คลินิกภาคสนามเชิงรุก</td>
+          <td>★★☆☆☆</td><td style="text-align:right">1.5M</td><td>ผลลัพธ์จริง 74 · พาร์ทเนอร์ 13</td><td>ผลลัพธ์ 12 โปรเจกต์</td>
+          <td class="actions"><a href="#" style="border-color:#34d399;color:#34d399">ปิดเคสแล้ว</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="opacity:.8;margin-top:10px">© 2025 ZYNVIA</p>
+  </div>
+</body>
+</html>
+
+<!DOCTYPE html><html lang="th">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZYNVIA — หน้าผู้ซื้อ</title>
+<style>
+:root{--bg:#040d1c;--gold:#d3ba7b}
+body{margin:0;font-family:system-ui,Arial,sans-serif;color:var(--gold);
+     background:linear-gradient(180deg,var(--bg),#061021)}
+.container{max-width:1100px;margin:auto;padding:28px 20px}
+a{color:var(--gold)} .top{display:flex;align-items:center;gap:12px}
+.logo{width:40px} h1{margin:6px 0 0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:22px 0}
+.card{border:1px solid rgba(211,186,123,.25);border-radius:14px;padding:16px;background:rgba(255,255,255,.02)}
+.badge{display:inline-block;border:1px solid rgba(211,186,123,.55);padding:2px 8px;border-radius:999px;font-size:12px}
+.table{width:100%;border-collapse:collapse;margin-top:16px;font-size:14px}
+.table th,.table td{padding:10px;border-bottom:1px solid rgba(211,186,123,.18);text-align:left}
+.actions a{border:1px solid rgba(211,186,123,.45);padding:6px 10px;border-radius:8px;text-decoration:none}
+.headerbar{display:flex;justify-content:space-between;align-items:center;margin:6px 0 10px}
+.search{display:flex;gap:8px;margin:8px 0}
+.search input{flex:1;padding:10px;border-radius:10px;border:1px solid rgba(211,186,123,.25);background:rgba(255,255,255,.03);color:var(--gold)}
+.search button{padding:10px 14px;border-radius:10px;border:1px solid rgba(211,186,123,.45);background:transparent;color:var(--gold)}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="headerbar">
+      <div class="top">
+        <a href="index.html"><img src="logo.png" class="logo" alt="Z"></a>
+        <div>
+          <div>ZYNVIA</div>
+          <h1>ซื้อไอเดีย</h1>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- MARKET TABLE -->
-  <section id="market" class="max-w-7xl mx-auto px-5 pb-24">
-    <div class="flex items-end justify-between mb-4">
-      <h3 class="text-2xl font-semibold">รายการไอเดีย</h3>
-      <div class="flex gap-2">
-        <input class="px-4 py-2 rounded-xl bg-white/5 border border-[rgba(211,186,123,0.25)] placeholder:opacity-70 focus:outline-none focus:ring-2 focus:ring-[rgba(211,186,123,0.40)]" placeholder="ค้นหาไอเดีย / หมวดหมู่ / โค้ดไอเดีย" />
-        <button class="gold-bg rounded-xl px-4">ค้นหา</button>
-      </div>
+      <a href="seller.html">ไปหน้าผู้ขาย →</a>
     </div>
 
-    <div class="table-wrap overflow-x-auto">
-      <table class="min-w-full text-sm">
-        <thead class="bg-white/5">
-          <tr>
-            <th class="text-left px-4 py-3 font-medium">โค้ดไอเดีย</th>
-            <th class="text-left px-4 py-3 font-medium">หมวดหมู่</th>
-            <th class="text-left px-4 py-3 font-medium">หัวเรื่อง</th>
-            <th class="text-left px-4 py-3 font-medium">การยืนยันข้อมูล</th>
-            <th class="text-right px-4 py-3 font-medium">การเข้าชม</th>
-            <th class="text-left px-4 py-3 font-medium">ข้อมูลเชิงปริมาณ</th>
-            <th class="text-left px-4 py-3 font-medium">ผลลัพธ์</th>
-            <th class="text-center px-4 py-3 font-medium">มั่นใจในตน</th>
-            <th class="text-center px-4 py-3 font-medium">ผู้สร้าง</th>
-            <th class="text-center px-4 py-3 font-medium">การกระทำ</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="row">
-            <td class="px-4 py-4 font-mono">132123</td>
-            <td class="px-4 py-4"><span class="badge rounded-full px-2.5 py-1 text-xs">อาหาร</span></td>
-            <td class="px-4 py-4">ชุดสมุนไพรฟาสท์ฟู้ดสำหรับ WFH</td>
-            <td class="px-4 py-4"><div class="flex gap-0.5"><span>★</span><span>★</span><span>★</span><span class="opacity-40">★</span><span class="opacity-40">★</span></div></td>
-            <td class="px-4 py-4 text-right">20.4k</td>
-            <td class="px-4 py-4 opacity-90">“วัตถุดิบพร้อม” + พาร์ทเนอร์ 41</td>
-            <td class="px-4 py-4">ขาย 5 · พาร์ทเนอร์ 1</td>
-            <td class="px-4 py-4"><div class="progress h-2 w-24 rounded-full overflow-hidden"><div class="h-full gold-bg" style="width:90%"></div></div></td>
-            <td class="px-4 py-4 text-center"><img class="w-8 h-8 rounded-full inline" src="https://i.pravatar.cc/64?img=14" alt="user"/></td>
-            <td class="px-4 py-4 text-center"><button class="px-3 py-1.5 rounded-lg border border-[rgba(211,186,123,0.45)] hover:bg-[rgba(211,186,123,0.10)]">ปลดล็อก</button></td>
-          </tr>
-
-          <tr class="row">
-            <td class="px-4 py-4 font-mono">231238</td>
-            <td class="px-4 py-4"><span class="badge rounded-full px-2.5 py-1 text-xs">อาหาร</span></td>
-            <td class="px-4 py-4">แพลตฟอร์มเก็บคาโตะเมฆ</td>
-            <td class="px-4 py-4"><div class="flex gap-0.5"><span>★</span><span>★</span><span class="opacity-40">★</span><span class="opacity-40">★</span><span class="opacity-40">★</span></div></td>
-            <td class="px-4 py-4 text-right">152</td>
-            <td class="px-4 py-4 opacity-90">ข้อมูลเชิงลึก 12 ชุด</td>
-            <td class="px-4 py-4">ขาย 2</td>
-            <td class="px-4 py-4"><div class="progress h-2 w-24 rounded-full overflow-hidden"><div class="h-full gold-bg" style="width:50%"></div></div></td>
-            <td class="px-4 py-4 text-center"><img class="w-8 h-8 rounded-full inline" src="https://i.pravatar.cc/64?img=21" alt="user"/></td>
-            <td class="px-4 py-4 text-center"><button class="px-3 py-1.5 rounded-lg border border-[rgba(211,186,123,0.45)] hover:bg-[rgba(211,186,123,0.10)]">ปลดล็อก</button></td>
-          </tr>
-
-          <tr class="row">
-            <td class="px-4 py-4 font-mono">284949</td>
-            <td class="px-4 py-4"><span class="badge rounded-full px-2.5 py-1 text-xs">การแพทย์</span></td>
-            <td class="px-4 py-4">คลินิกภาคสนามเชิงรุก</td>
-            <td class="px-4 py-4"><div class="flex gap-0.5"><span>★</span><span>★</span><span class="opacity-40">★</span><span class="opacity-40">★</span><span class="opacity-40">★</span></div></td>
-            <td class="px-4 py-4 text-right">1.5M</td>
-            <td class="px-4 py-4 opacity-90">ผลลัพธ์จริง 74 · พาร์ทเนอร์ 13</td>
-            <td class="px-4 py-4">ผลลัพธ์ 12 โปรเจกต์</td>
-            <td class="px-4 py-4"><div class="progress h-2 w-24 rounded-full overflow-hidden"><div class="h-full gold-bg" style="width:100%"></div></div></td>
-            <td class="px-4 py-4 text-center"><img class="w-8 h-8 rounded-full inline" src="https://i.pravatar.cc/64?img=5" alt="user"/></td>
-            <td class="px-4 py-4 text-center"><button class="px-3 py-1.5 rounded-lg border border-emerald-400/40 text-emerald-300 hover:bg-emerald-400/10">ปิดเคสแล้ว</button></td>
-          </tr>
-        </tbody>
-      </table>
+    <!-- แถบค้นหา + ขั้นตอนผู้ซื้อ -->
+    <div class="search">
+      <input placeholder="ค้นหาไอเดีย / หมวดหมู่ / โค้ดไอเดีย">
+      <button>ค้นหา</button>
     </div>
 
-    <div class="mt-6 flex items-center justify-between text-sm opacity-80">
-      <div>แสดง 1–3 จาก 3 รายการ</div>
-      <div class="flex gap-2">
-        <button class="px-3 py-1 rounded-lg border border-[rgba(211,186,123,0.25)] hover:bg-white/5">ก่อนหน้า</button>
-        <button class="px-3 py-1 rounded-lg border border-[rgba(211,186,123,0.25)] hover:bg-white/5">ถัดไป</button>
-      </div>
+    <div class="grid">
+      <div class="card"><div class="badge">ขั้นที่ 1</div><h3>ค้นหาความเป็นไปได้</h3><p>วิเคราะห์ข้อมูล ตรวจสอบความสามารถ และโอกาสตลาด</p></div>
+      <div class="card"><div class="badge">ขั้นที่ 2</div><h3>ความปลอดภัย / เซ็นสัญญาซื้อไอเดีย</h3><p>ยืนยันตัวตน ปกป้องข้อมูลเชิงลึก</p></div>
+      <div class="card"><div class="badge">ขั้นที่ 3</div><h3>ปิดการขาย 3–7 วัน</h3><p>สัญญา + ส่งมอบ + ป้องกันการคัดลอก</p></div>
     </div>
-  </section>
 
-  <footer class="border-t border-[rgba(211,186,123,0.2)] py-10 text-center text-sm opacity-80">
-    © 2025 ZYNVIA — ผู้ส่งมอบไอเดีย
-  </footer>
+    <!-- ตารางรายการ -->
+    <h3>รายการไอเดีย (ฝั่งผู้ซื้อ)</h3>
+    <table class="table">
+      <thead><tr>
+        <th>โค้ดไอเดีย</th><th>หมวดหมู่</th><th>หัวเรื่อง</th><th>การยืนยัน</th>
+        <th style="text-align:right">การเข้าชม</th><th>ข้อมูลเชิงปริมาณ</th><th>ผลลัพธ์</th><th>ผู้สร้าง</th><th>การกระทำ</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td>132123</td><td><span class="badge">อาหาร</span></td><td>ชุดสมุนไพรฟาสท์ฟู้ดสำหรับ WFH</td>
+          <td>★★★☆☆</td><td style="text-align:right">20.4k</td><td>“วัตถุดิบพร้อม” + พาร์ทเนอร์ 41</td><td>ขาย 5</td>
+          <td><span class="badge">user</span></td><td class="actions"><a href="#">ปลดล็อก</a></td>
+        </tr>
+        <tr>
+          <td>231238</td><td><span class="badge">อาหาร</span></td><td>แพลตฟอร์มเก็บคาโตะเมฆ</td>
+          <td>★★☆☆☆</td><td style="text-align:right">152</td><td>ข้อมูลเชิงลึก 12 ชุด</td><td>ขาย 2</td>
+          <td><span class="badge">user</span></td><td class="actions"><a href="#">ปลดล็อก</a></td>
+        </tr>
+        <tr>
+          <td>284949</td><td><span class="badge">การแพทย์</span></td><td>คลินิกภาคสนามเชิงรุก</td>
+          <td>★★☆☆☆</td><td style="text-align:right">1.5M</td><td>ผลลัพธ์จริง 74 · พาร์ทเนอร์ 13</td><td>ผลลัพธ์ 12 โปรเจกต์</td>
+          <td><span class="badge">user</span></td><td class="actions"><a href="#" style="border-color:#34d399;color:#34d399">ปิดเคสแล้ว</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="opacity:.8;margin-top:10px">© 2025 ZYNVIA</p>
+  </div>
 </body>
 </html>
