@@ -1,150 +1,60 @@
-<!DOCTYPE html><html lang="th">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ZYNVIA — จับไอเดีย สร้างโอกาส เปลี่ยนโลก</title>
-<style>
-:root{--bg:#040d1c;--gold:#d3ba7b;--line:rgba(211,186,123,.22)}
-*{box-sizing:border-box} body{margin:0;font-family:system-ui,Arial,sans-serif;color:var(--gold);
-background:radial-gradient(900px 500px at 70% 10%,rgba(211,186,123,.08),transparent 40%),
-linear-gradient(180deg,var(--bg),#061021)}
-.container{max-width:1120px;margin:auto;padding:32px 20px}
-.center{text-align:center}
-.logo{width:120px;height:120px;margin:40px auto 16px;display:block;filter:drop-shadow(0 6px 24px rgba(211,186,123,.25))}
-h1{font-size:48px;letter-spacing:.04em;margin:0 0 10px}
-.tag{opacity:.9;font-size:22px}
-.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:22px;margin:36px 0}
-.card{border:1px solid var(--line);border-radius:16px;padding:18px;text-align:center;background:rgba(255,255,255,.02)}
-.card:hover{background:rgba(211,186,123,.07)}
-.icon{font-size:26px;margin-bottom:8px}
-.btns{display:flex;gap:12px;justify-content:center;margin:28px 0 6px}
-.btn{padding:12px 20px;border-radius:12px;border:1.5px solid var(--line);color:var(--gold);text-decoration:none}
-.btn.gold{background:var(--gold);color:#0b0e14;border-color:transparent}
-section{scroll-margin-top:80px}
-.section{border-top:1px solid var(--line);margin-top:40px;padding-top:28px}
-.row{overflow-x:auto;border:1px solid var(--line);border-radius:14px}
-table{width:100%;border-collapse:collapse;font-size:14px}
-th,td{padding:12px;border-bottom:1px solid rgba(211,186,123,.18);text-align:left}
-th{text-align:left;background:rgba(255,255,255,.04)}
-.badge{display:inline-block;border:1px solid rgba(211,186,123,.55);padding:2px 8px;border-radius:999px;font-size:12px}
-.topbar{position:sticky;top:0;backdrop-filter:saturate(130%) blur(8px);background:#040d1ccc;border-bottom:1px solid var(--line);z-index:10}
-.nav{display:flex;gap:14px;align-items:center;justify-content:space-between;max-width:1120px;margin:auto;padding:10px 20px}
-.nav a{color:var(--gold);text-decoration:none;border:1px solid transparent;padding:6px 10px;border-radius:10px}
-.nav a:hover{border-color:var(--line)}
-footer{border-top:1px solid var(--line);text-align:center;padding:28px 0;opacity:.85;margin-top:36px}
-@media(max-width:860px){.grid{grid-template-columns:repeat(2,1fr)} h1{font-size:36px}}
-</style>
-</head>
-<body>
+<section class="bg-[#0a0f1a] text-gray-200 py-20 px-6">
+  <div class="max-w-6xl mx-auto text-center">
 
-  <!-- NAV -->
-  <div class="topbar">
-    <div class="nav">
-      <a href="#top" style="display:flex;align-items:center;gap:10px"><img src="logo.png" alt="Z" style="width:28px;height:28px;object-fit:contain"> <b>ZYNVIA</b></a>
-      <div style="display:flex;gap:8px">
-        <a href="#seller">ผู้ขาย</a>
-        <a href="#buyer">ผู้ซื้อ</a>
+    <!-- Headline -->
+    <h2 class="text-4xl font-bold text-yellow-400 mb-6">
+      บทที่ 2 : ผู้ซื้อไอเดีย
+    </h2>
+    <p class="text-lg text-gray-300 max-w-3xl mx-auto mb-12">
+      โลกธุรกิจไม่เคยอ่อนโยนกับใคร — ไอเดียเล็กอาจสร้างธุรกิจใหญ่ 
+      และเงินลงทุนมหาศาลอาจหายไปในพริบตา<br>
+      <span class="font-semibold text-yellow-400">
+        ที่ ZYNVIA ไม่มีการขายฝัน มีแต่ “โอกาสจริง” ที่คุณต้องตัดสินใจเอง
+      </span>
+    </p>
+
+    <!-- Key Selling Points -->
+    <div class="grid md:grid-cols-2 gap-10 text-left">
+
+      <!-- Newcomers -->
+      <div class="bg-gray-900 rounded-2xl p-8 shadow-lg">
+        <h3 class="text-2xl font-bold text-yellow-400 mb-4">
+          สำหรับนักลงทุนหน้าใหม่ (Newcomers)
+        </h3>
+        <ul class="space-y-3 text-gray-300">
+          <li>✅ เริ่มเล็ก <span class="italic">Start Small</span> เพื่อเรียนรู้ตลาดจริง</li>
+          <li>✅ ทุกไอเดียมีราคา/ความเสี่ยงให้เลือก</li>
+          <li>✅ ฝึกวิเคราะห์ด้วยข้อมูลจริงแบบมืออาชีพ</li>
+          <li>✅ ลงทุนเล็ก แต่ได้บทเรียนใหญ่</li>
+        </ul>
+      </div>
+
+      <!-- Professionals -->
+      <div class="bg-gray-900 rounded-2xl p-8 shadow-lg">
+        <h3 class="text-2xl font-bold text-yellow-400 mb-4">
+          สำหรับนักลงทุนมือโปร (Professionals)
+        </h3>
+        <ul class="space-y-3 text-gray-300">
+          <li>✅ เข้าถึง <span class="italic">Exclusive Deals</span> ไอเดียต้นน้ำ</li>
+          <li>✅ ใช้ระบบ Star Rating & Peer Review เปรียบเทียบมุมมอง</li>
+          <li>✅ ปลอดภัยด้วย Digital Signature & Verification</li>
+          <li>✅ “The next big opportunity might start from the smallest idea”</li>
+        </ul>
       </div>
     </div>
-  </div>
 
-  <!-- TOP / HERO -->
-  <div id="top" class="container center">
-    <img src="logo.png" alt="ZYNVIA" class="logo">
-    <h1>ZYNVIA</h1>
-    <div class="tag">จับไอเดีย สร้างโอกาส เปลี่ยนโลก</div>
-
-    <!-- แถวไอคอน -->
-    <div class="grid">
-      <a class="card" href="#seller" title="ไปหน้าผู้ขาย">
-        <div class="icon">💡</div><div>ขายไอเดีย</div>
+    <!-- Call to Action -->
+    <div class="mt-16">
+      <p class="text-xl text-gray-300 mb-6">
+        ไม่ว่าคุณจะเริ่มจาก <span class="text-yellow-400 font-semibold">ทุนเล็ก</span>  
+        หรือเป็นนักลงทุนที่ <span class="text-yellow-400 font-semibold">มองขาด</span>  
+        ZYNVIA คือกระดานกลางที่ให้คุณเลือกโอกาสด้วยข้อมูลครบถ้วน
+      </p>
+      <a href="#market" 
+         class="inline-block bg-yellow-400 text-[#0a0f1a] font-bold px-8 py-4 rounded-xl text-lg hover:scale-105 transition">
+        🔎 เริ่มสำรวจตลาดไอเดีย
       </a>
-      <a class="card" href="#buyer" title="ไปหน้าผู้ซื้อ">
-        <div class="icon">💰</div><div>ซื้อไอเดีย</div>
-      </a>
-      <div class="card"><div class="icon">🤝</div><div>พาร์ทเนอร์ไอเดีย</div></div>
-      <div class="card"><div class="icon">🏪</div><div>เจ้าของธุรกิจ</div></div>
-      <div class="card"><div class="icon">✅</div><div>ฟรีแลนซ์ทำโปรเจกต์</div></div>
     </div>
 
-    <div class="btns">
-      <a class="btn gold" href="#seller">เริ่มขายไอเดีย</a>
-      <a class="btn" href="#buyer">เริ่มค้นหาไอเดีย</a>
-    </div>
   </div>
-
-  <!-- SELLER SECTION -->
-  <div id="seller" class="container section">
-    <h2 class="center" style="margin:0 0 14px">หน้าผู้ขาย (Sell)</h2>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:12px 0">
-      <div class="card"><div class="badge">ขั้นที่ 1</div><h3>โพสต์ไอเดีย</h3><p>ใส่ชื่อ ปัญหา Persona และทรัพยากร</p></div>
-      <div class="card"><div class="badge">ขั้นที่ 2</div><h3>ผู้ซื้อปลดล็อก/จ่าย</h3><p>เนื้อหาเชิงลึกถูกป้องกันจนกว่าจะยอมรับ</p></div>
-      <div class="card"><div class="badge">ขั้นที่ 3</div><h3>ปิดการขาย 3–7 วัน</h3><p>สัญญา + ส่งมอบ + สร้างพาร์ทเนอร์</p></div>
-    </div>
-
-    <div class="row">
-      <table>
-        <thead><tr>
-          <th>โค้ดไอเดีย</th><th>หมวดหมู่</th><th>หัวเรื่อง</th><th>การยืนยัน</th>
-          <th style="text-align:right">การเข้าชม</th><th>ข้อมูลเชิงปริมาณ</th><th>ผลลัพธ์</th><th>การกระทำ</th>
-        </tr></thead>
-        <tbody>
-          <tr>
-            <td>132123</td><td><span class="badge">อาหาร</span></td><td>ชุดสมุนไพรฟาสท์ฟู้ดสำหรับ WFH</td>
-            <td>★★★☆☆</td><td style="text-align:right">20.4k</td><td>“วัตถุดิบพร้อม” + พาร์ทเนอร์ 41</td><td>ขาย 5 · พาร์ทเนอร์ 1</td>
-            <td><a class="btn" href="#">ปลดล็อก</a></td>
-          </tr>
-          <tr>
-            <td>231238</td><td><span class="badge">อาหาร</span></td><td>แพลตฟอร์มเก็บคาโตะเมฆ</td>
-            <td>★★☆☆☆</td><td style="text-align:right">152</td><td>ข้อมูลเชิงลึก 12 ชุด</td><td>ขาย 2</td>
-            <td><a class="btn" href="#">ปลดล็อก</a></td>
-          </tr>
-          <tr>
-            <td>284949</td><td><span class="badge">การแพทย์</span></td><td>คลินิกภาคสนามเชิงรุก</td>
-            <td>★★☆☆☆</td><td style="text-align:right">1.5M</td><td>ผลลัพธ์จริง 74 · พาร์ทเนอร์ 13</td><td>ผลลัพธ์ 12 โปรเจกต์</td>
-            <td><a class="btn" style="border-color:#34d399;color:#34d399" href="#">ปิดเคสแล้ว</a></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-  <!-- BUYER SECTION -->
-  <div id="buyer" class="container section">
-    <h2 class="center" style="margin:0 0 14px">หน้าผู้ซื้อ (Buy)</h2>
-
-    <div style="display:flex;gap:8px;margin:8px 0">
-      <input placeholder="ค้นหาไอเดีย / หมวดหมู่ / โค้ดไอเดีย"
-             style="flex:1;padding:10px;border-radius:10px;border:1px solid var(--line);background:rgba(255,255,255,.03);color:var(--gold)">
-      <button class="btn">ค้นหา</button>
-    </div>
-
-    <div class="row">
-      <table>
-        <thead><tr>
-          <th>โค้ดไอเดีย</th><th>หมวดหมู่</th><th>หัวเรื่อง</th><th>การยืนยัน</th>
-          <th style="text-align:right">การเข้าชม</th><th>ข้อมูลเชิงปริมาณ</th><th>ผลลัพธ์</th><th>ผู้สร้าง</th><th>การกระทำ</th>
-        </tr></thead>
-        <tbody>
-          <tr>
-            <td>132123</td><td><span class="badge">อาหาร</span></td><td>ชุดสมุนไพรฟาสท์ฟู้ดสำหรับ WFH</td>
-            <td>★★★☆☆</td><td style="text-align:right">20.4k</td><td>“วัตถุดิบพร้อม” + พาร์ทเนอร์ 41</td><td>ขาย 5</td>
-            <td><span class="badge">user</span></td><td><a class="btn" href="#">ปลดล็อก</a></td>
-          </tr>
-          <tr>
-            <td>231238</td><td><span class="badge">อาหาร</span></td><td>แพลตฟอร์มเก็บคาโตะเมฆ</td>
-            <td>★★☆☆☆</td><td style="text-align:right">152</td><td>ข้อมูลเชิงลึก 12 ชุด</td><td>ขาย 2</td>
-            <td><span class="badge">user</span></td><td><a class="btn" href="#">ปลดล็อก</a></td>
-          </tr>
-          <tr>
-            <td>284949</td><td><span class="badge">การแพทย์</span></td><td>คลินิกภาคสนามเชิงรุก</td>
-            <td>★★☆☆☆</td><td style="text-align:right">1.5M</td><td>ผลลัพธ์จริง 74 · พาร์ทเนอร์ 13</td><td>ผลลัพธ์ 12 โปรเจกต์</td>
-            <td><span class="badge">user</span></td><td><a class="btn" style="border-color:#34d399;color:#34d399" href="#">ปิดเคสแล้ว</a></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-  <footer>© 2025 ZYNVIA</footer>
-</body>
-</html>
+</section>
